@@ -3,59 +3,56 @@
     <h1 class="text-h6 mb-3 font-weight-bold">Online</h1>
     <v-card flat class="px-6 py-4 card-user">
       <div class="delivered-imgs">
-        <div class="d-flex flex-column justify-center text-center">
-          <img
-            src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
-          />
-          <p class="text-caption">Zafril</p>
-          <p class="text-caption">SCBD</p>
-        </div>
-        <div class="d-flex flex-column justify-center text-center">
-          <img
-            src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
-          />
-          <p class="text-caption">Zafril</p>
-          <p class="text-caption">SCBD</p>
-        </div>
-        <div class="d-flex flex-column justify-center text-center">
-          <img
-            src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
-          />
-          <p class="text-caption">Zafril</p>
-          <p class="text-caption">SCBD</p>
-        </div>
-        <div class="d-flex flex-column justify-center text-center">
-          <img
-            src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
-          />
-          <p class="text-caption">Zafril</p>
-          <p class="text-caption">SCBD</p>
-        </div>
-        <div class="d-flex flex-column justify-center text-center">
-          <img
-            src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
-          />
-          <p class="text-caption">Zafril</p>
-          <p class="text-caption">SCBD</p>
-        </div>
-        <div class="d-flex flex-column justify-center text-center">
-          <img
-            src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
-          />
-          <p class="text-caption">Zafril</p>
-          <p class="text-caption">SCBD</p>
-        </div>
-        <div class="d-flex flex-column justify-center text-center">
-          <img
-            src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
-          />
-          <p class="text-caption">Zafril</p>
-          <p class="text-caption">SCBD</p>
+        <div
+          v-for="(item, i) of users"
+          :key="i"
+          class="d-flex flex-column justify-center text-center"
+        >
+          <img :src="`https://avatar.iran.liara.run/public/${i}`" />
+          <p class="text-caption">{{ item.name }}</p>
+          <p class="text-caption">{{ item.location }}</p>
         </div>
       </div>
     </v-card>
   </div>
 </template>
+<script>
+export default {
+  data: () => ({
+    users: [
+      {
+        name: "Ade",
+        location: "BSD",
+      },
+      {
+        name: "Bayu",
+        location: "BSD",
+      },
+      {
+        name: "Ical",
+        location: "BSD",
+      },
+      {
+        name: "Dewa",
+        location: "BSD",
+      },
+      {
+        name: "Agung",
+        location: "BSD",
+      },
+
+      {
+        name: "Luqman",
+        location: "BSD",
+      },
+      {
+        name: "Yogi",
+        location: "BSD",
+      },
+    ],
+  }),
+};
+</script>
 
 <style lang="scss" scoped>
 .card-user {
