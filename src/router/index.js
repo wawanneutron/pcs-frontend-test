@@ -14,9 +14,9 @@ const routes = [
     component: () => import("@/pages/index.vue"),
   },
   {
-    path: "/test",
-    name: "test",
-    component: () => import("@/components/Test.vue"),
+    path: "/notifications",
+    name: "notifications",
+    component: () => import("@/components/Notification.vue"),
   },
 ];
 

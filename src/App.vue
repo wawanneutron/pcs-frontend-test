@@ -1,10 +1,8 @@
 <template>
   <v-app class="app-wrap">
-    <v-main class="app-wrap__mobile bg-white ma-auto pb-12">
-      <Navbar />
+    <v-main class="app-wrap__mobile bg-white ma-auto">
       <router-view />
     </v-main>
-    <ButtonNavigation />
   </v-app>
 </template>
 

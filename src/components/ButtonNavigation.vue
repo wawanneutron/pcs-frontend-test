@@ -8,7 +8,7 @@
       </div>
     </router-link>
 
-    <router-link :to="{ name: 'test' }" class="text-decoration-none">
+    <router-link :to="{ name: 'notifications' }" class="text-decoration-none">
       <div class="d-flex flex-column align-center cursor-pointer">
         <v-icon color="black">mdi-calendar-check</v-icon>
 
@@ -39,6 +39,7 @@
 
 <style lang="scss" scoped>
 .card-btn-nav {
+  margin-top: 100px !important;
   width: 480px;
   box-shadow: 0px -14px 15px -3px rgba(0, 0, 0, 0.1);
 
