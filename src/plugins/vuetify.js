@@ -22,6 +22,7 @@ export default createVuetify({
           primary: colors.blue.lighten4,
           secondary: colors.red.lighten4,
           blue: colors.blue.accent1,
+          grey: colors.grey.darken1,
         },
       },
     },
