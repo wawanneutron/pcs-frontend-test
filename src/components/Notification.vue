@@ -34,64 +34,10 @@
 </template>
 
 <script>
+import { NOTIFICATIONS } from "@/data/general";
 export default {
   data: () => ({
-    notifications: [
-      {
-        title: "Reimbursement",
-        desc: "Lorem ipsum dolor sit amet consectetur, adipisici elit. Ex, illum Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, illum.",
-        date: "Today",
-        read: false,
-      },
-      {
-        title: "Reimbursement",
-        desc: "Lorem ipsum dolor sit amet consectetur, adipisici elit. Ex, illum Lorem i.",
-        date: "Yesterday",
-        read: true,
-      },
-      {
-        title: "Reimbursement",
-        desc: "Lorem ipsum dolor sit am tetur, adipisici elit. Ex, illum Lorem ipsum dolor sit amet ",
-        date: "2022-10-06",
-        read: false,
-      },
-      {
-        title: "Sickness",
-        desc: " dolor sit amet consectetur, adipisici elit. Ex, illum Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, ",
-        date: "2022-11-05",
-        read: false,
-      },
-      {
-        title: "Sickness",
-        desc: " dolor sit amet consectetur, adipisici elit. Ex, illum Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, ",
-        date: "2022-11-05",
-        read: true,
-      },
-      {
-        title: "Sickness",
-        desc: " dolor sr sit amet consectetur, adipisicing elit. Ex, ",
-        date: "2022-11-05",
-        read: true,
-      },
-      {
-        title: "Overtime",
-        desc: " dolor sit amet consectetur, adipisici elit. Ex, illum Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, ",
-        date: "2022-11-05",
-        read: false,
-      },
-      {
-        title: "Overtime",
-        desc: " dolor sit amet consectetur, adipisici elit. Ex, illum Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, ",
-        date: "2022-11-05",
-        read: true,
-      },
-      {
-        title: "Overtime",
-        desc: " dolor sit amet consectetur, adipisici elit. Ex, illum Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, ",
-        date: "2022-11-05",
-        read: true,
-      },
-    ],
+    notifications: NOTIFICATIONS,
   }),
 };
 </script>

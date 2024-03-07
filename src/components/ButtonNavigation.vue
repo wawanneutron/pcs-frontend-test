@@ -1,41 +1,42 @@
 <template>
   <div class="card-btn-nav py-5 px-3 d-flex justify-space-between ma-auto">
-    <router-link :to="{ name: 'home' }" class="text-decoration-none">
-      <div class="d-flex flex-column align-center cursor-pointer">
-        <v-icon color="red">mdi-home</v-icon>
+    <router-link
+      v-for="(item, i) of menus"
+      :key="i"
+      :to="{ path: item.route }"
+      class="text-decoration-none text-grey d-flex flex-column justify-end cursor-pointer"
+    >
+      <template v-if="!item.float">
+        <div
+          class="d-flex flex-column align-center cursor-pointer"
+          :class="item.name === 'Home' ? 'text-red' : 'black'"
+        >
+          <v-icon>{{ item.icon }}</v-icon>
 
-        <span class="text-red">Home</span>
-      </div>
+          <span class="text-body-2">{{ item.name }}</span>
+        </div>
+      </template>
+
+      <template v-if="item.float">
+        <div class="d-flex flex-column justify-end cursor-pointer">
+          <div class="float-button">
+            <v-icon size="36" class="ma-auto">{{ item.icon }}</v-icon>
+          </div>
+          <span class="text-body-2">{{ item.name }} </span>
+        </div>
+      </template>
     </router-link>
-
-    <router-link :to="{ name: 'notifications' }" class="text-decoration-none">
-      <div class="d-flex flex-column align-center cursor-pointer">
-        <v-icon color="black">mdi-calendar-check</v-icon>
-
-        <span class="text-black">Attendence</span>
-      </div>
-    </router-link>
-
-    <div class="d-flex flex-column justify-end cursor-pointer">
-      <div class="float-button">
-        <v-icon size="36" class="ma-auto">mdi-logout</v-icon>
-      </div>
-      <span>Check Out</span>
-    </div>
-
-    <div class="d-flex flex-column align-center cursor-pointer">
-      <v-icon>mdi-list-box</v-icon>
-
-      <span>Form</span>
-    </div>
-
-    <div class="d-flex flex-column align-center cursor-pointer">
-      <v-icon>mdi-cog</v-icon>
-
-      <span>Setting</span>
-    </div>
   </div>
 </template>
+
+<script>
+import { MENUS } from "@/data/general";
+export default {
+  data: () => ({
+    menus: MENUS,
+  }),
+};
+</script>
 
 <style lang="scss" scoped>
 .card-btn-nav {

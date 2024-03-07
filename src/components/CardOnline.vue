@@ -17,39 +17,10 @@
   </div>
 </template>
 <script>
+import { USERS } from "@/data/general";
 export default {
   data: () => ({
-    users: [
-      {
-        name: "Ade",
-        location: "BSD",
-      },
-      {
-        name: "Bayu",
-        location: "BSD",
-      },
-      {
-        name: "Ical",
-        location: "BSD",
-      },
-      {
-        name: "Dewa",
-        location: "BSD",
-      },
-      {
-        name: "Agung",
-        location: "BSD",
-      },
-
-      {
-        name: "Luqman",
-        location: "BSD",
-      },
-      {
-        name: "Yogi",
-        location: "BSD",
-      },
-    ],
+    users: USERS,
   }),
 };
 </script>
@@ -57,6 +28,7 @@ export default {
 <style lang="scss" scoped>
 .card-user {
   box-shadow: 0px 0px 7px 0.9px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 18px;
 }
 .delivered-imgs {
   display: flex;
