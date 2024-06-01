@@ -16,13 +16,11 @@
     </v-card>
   </div>
 </template>
-<script>
+<script setup>
+import { ref } from "vue";
 import { USERS } from "@/data/general";
-export default {
-  data: () => ({
-    users: USERS,
-  }),
-};
+
+const users = ref(USERS);
 </script>
 
 <style lang="scss" scoped>

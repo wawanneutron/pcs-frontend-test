@@ -33,25 +33,13 @@
   </div>
 </template>
 
-<script>
-import { defineComponent } from "vue";
+<script setup>
+import { ref } from "vue";
 import { Carousel, Pagination, Slide } from "vue3-carousel";
 import { NEWS } from "@/data/general";
-
 import "vue3-carousel/dist/carousel.css";
 
-export default defineComponent({
-  name: "WrapAround",
-  components: {
-    Carousel,
-    Slide,
-    Pagination,
-  },
-
-  data: () => ({
-    news: NEWS,
-  }),
-});
+const news = ref(NEWS);
 </script>
 
 <style lang="scss" scoped>

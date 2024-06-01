@@ -29,13 +29,11 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from "vue";
 import { MENUS } from "@/data/general";
-export default {
-  data: () => ({
-    menus: MENUS,
-  }),
-};
+
+const menus = ref(MENUS);
 </script>
 
 <style lang="scss" scoped>

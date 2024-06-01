@@ -33,13 +33,11 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from "vue";
 import { NOTIFICATIONS } from "@/data/general";
-export default {
-  data: () => ({
-    notifications: NOTIFICATIONS,
-  }),
-};
+
+const notifications = ref(NOTIFICATIONS);
 </script>
 
 <style lang="scss">
